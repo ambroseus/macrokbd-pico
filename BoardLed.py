@@ -6,19 +6,20 @@ from neopixel import NeoPixel
 class BoardLed:
     def __init__(self, color):
         self.brightness = 0
+        self.color = color
         self.__led = NeoPixel(board.GP23, 1, brightness=self.brightness, auto_write=False)
         self.__led[0] = color
 
     def set_brightness(self, value):
-        bright = value
+        self.brightness = value
         if value < 0:
-            bright = 0
-        if value > 1:
-            bright = 1
-        self.brightness = bright
-        self.__led.brightness = self.brightness
+            self.brightness = 0
+        elif value > 1:
+            self.brightness = 1
         
     def show(self):
+        self.__led.brightness = self.brightness
+        self.__led[0] = self.color
         self.__led.show()
 
     def __del__(self):
