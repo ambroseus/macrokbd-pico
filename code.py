@@ -2,7 +2,7 @@ import asyncio, json
 from Colors import Colors
 from BoardLed import BoardLed, BlinkLed
 
-color = Colors.Orange
+color = Colors.Blue
 
 try:
     with open("/colors.txt", "w") as fp:
@@ -11,7 +11,7 @@ try:
     color = Colors.Green
 except OSError as e:
     print("ERROR: ", e)
-    color = Colors.Red
+    color = Colors.Orange
 
 async def blink(color):
     blinking = BlinkLed(BoardLed(color))
