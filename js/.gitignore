@@ -131,3 +131,4 @@ dist
 .pnp.*
 
 #src/credentials.ts
+bundle.js

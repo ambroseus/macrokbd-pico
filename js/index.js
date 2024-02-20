@@ -1,6 +1,5 @@
 const { NeoPixel } = require('neopixel')
 const BOARD_NEOPIXEL_PIN = 23
-// pinMode(BOARD_NEOPIXEL_PIN, OUTPUT)
 
 const np = new NeoPixel(BOARD_NEOPIXEL_PIN, 1)
 let on = false
