@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "flash": "kaluma flash ./index.js --bundle",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
